@@ -84,7 +84,10 @@ class SearchBar extends Component {
 
   handleInput = (e) => {
     this.setState({value: e.target.value})
-    if (this.props.onChange) {
+    if (this.props.onChangeWithEvent) {
+      this.props.onChangeWithEvent(e)
+    }
+    if (this.props.onValueChange) {
       this.props.onChange(e.target.value)
     }
   }
@@ -115,6 +118,7 @@ class SearchBar extends Component {
       classes,
       closeIcon,
       disabled,
+      onChangeWithEvent,
       onCancelSearch,
       onRequestSearch,
       searchIcon,
@@ -199,6 +203,8 @@ SearchBar.propTypes = {
   onCancelSearch: PropTypes.func,
   /** Fired when the text value changes. */
   onChange: PropTypes.func,
+  /** Fired when the text value changes. */
+  onChangeWithEvent: PropTypes.func,
   /** Fired when the search icon is clicked. */
   onRequestSearch: PropTypes.func,
   /** Sets placeholder text for the embedded text field. */

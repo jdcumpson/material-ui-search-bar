@@ -38,7 +38,8 @@ return (
 |closeIcon|`node`|`<ClearIcon style={{ color: grey[500] }} />`|Override the close icon.|
 |disabled|`bool`|`false`|Disables text field.|
 |onCancelSearch|`func`||Fired when the search is cancelled.|
-|onChange|`func`||Fired when the text value changes.|
+|onChange|`func`||Fired when the text value changes. Callback argument is the string value.|
+|onChangeWithEvent|`func`||Fired when the text value changes. Callback argument is an event object.|
 |onRequestSearch|`func`||Fired when the search icon is clicked.|
 |placeholder|`string`|`'Search'`|Sets placeholder text for the embedded text field.|
 |searchIcon|`node`|`<SearchIcon style={{ color: grey[500] }} />`|Override the search icon.|

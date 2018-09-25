@@ -45,6 +45,10 @@ declare module 'material-ui-search-bar' {
        */
       onChange?(query: string): void;
       /**
+       * Fired when the text value changes.
+       */
+      onChangeWithEvent?(event: Event): void;
+      /**
        * Fired when the search icon is clicked.
        */
       onRequestSearch?(): void;
